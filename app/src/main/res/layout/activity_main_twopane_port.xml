@@ -4,9 +4,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jravelo.ravelocis436_project2.MainActivity">
+    tools:context="cis436project4.MainActivity">
     <fragment
-        android:name="jravelo.ravelocis436_project2.ClassListFragment"
+        android:name="cis436project4.ClassListFragment"
         android:id="@+id/class_list_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"

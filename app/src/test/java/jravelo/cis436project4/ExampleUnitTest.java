@@ -1,4 +1,4 @@
-package jravelo.ravelocis436_project2;
+package jravelo.cis436project4;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package jravelo.ravelocis436_project2;
+package jravelo.cis436project4;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("jravelo.ravelocis436_project2", appContext.getPackageName());
+        assertEquals("jravelo.cis436_project4", appContext.getPackageName());
     }
 }

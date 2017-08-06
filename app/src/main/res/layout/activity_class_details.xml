@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jravelo.ravelocis436_project2.ClassDetailsActivity">
+    tools:context="cis436project4.ClassDetailsActivity">
     <FrameLayout
         android:name="jravelo.ravelocis436_project2.ClassDetailsFragment"
         android:id="@+id/class_details_fragment"
