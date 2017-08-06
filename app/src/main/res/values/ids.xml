@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="str_rb" type="id" />
+    <item name="str_lbl" type="id" />
+    <item name="int_rb" type="id" />
+    <item name="int_lbl" type="id" />
+    <item name="wis_rb" type="id" />
+    <item name="wis_lbl" type="id" />
+    <item name="dex_rb" type="id" />
+    <item name="dex_lbl" type="id" />
+    <item name="frag_details_title" type="id" />
+    <item name="unused_points_lbl" type="id" />
+    <item name="unused_points_lbl2" type="id" />
+</resources>
