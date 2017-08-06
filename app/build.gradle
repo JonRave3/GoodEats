@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "jravelo.cis436_project4"
+        applicationId "goodeats.cis436_project4"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
