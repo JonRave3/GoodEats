@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import goodeats.cis436project4.R;
 
-import jravelo.cis436project4.R;
 
 public class ClassDetailsFragment extends Fragment {
 

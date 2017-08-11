@@ -6,9 +6,8 @@ import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import jravelo.cis436project4.*;
 
-import jravelo.cis436project4.R;
+import goodeats.cis436project4.R;
 
 public class MainActivity extends AppCompatActivity {
 

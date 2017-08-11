@@ -11,7 +11,7 @@ import android.provider.BaseColumns;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-import jravelo.cis436project4.R;
+import goodeats.cis436project4.R;
 
 /**
  * Created by JRavelo on 8/8/2017.

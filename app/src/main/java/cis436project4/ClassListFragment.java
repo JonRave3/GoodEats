@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import jravelo.cis436project4.R;
+import goodeats.cis436project4.R;
 
 public class ClassListFragment extends ListFragment {
 

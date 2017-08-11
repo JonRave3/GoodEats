@@ -3,9 +3,6 @@ package cis436project4;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by JRavelo on 7/3/2017.
- */
 
 public class SharedPrefs {
     private static String pkg_name = "jravelo.cis436_project4";
