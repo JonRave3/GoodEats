@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food1">
+        <item name="food_id">0</item>
+        <item name="food_name">Cheese Burger</item>
+        <item name="food_category">American</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id"></item>
+    </string-array>
+    <string-array name="food2">
+        <item name="food_id">1</item>
+        <item name="food_name">Hot Dog</item>
+        <item name="food_category">American</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">1</item>
+    </string-array>
+    <string-array name="food3">
+        <item name="food_id">2</item>
+        <item name="food_name">Flap Jacks</item>
+        <item name="food_category">American</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Breakfast Food</item>
+        <item name="food_photo_id">2</item>
+    </string-array>
+    <string-array name="food4">
+        <item name="food_id">3</item>
+        <item name="food_name">Big Mac</item>
+        <item name="food_category">American</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">McDonalds</item>
+        <item name="food_photo_id">3</item>
+    </string-array>
+    <string-array name="food5">
+        <item name="food_id">4</item>
+        <item name="food_name">Apple Pie</item>
+        <item name="food_category">American</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Dessert</item>
+        <item name="food_photo_id">4</item>
+    </string-array>
+    <string-array name="food6">
+        <item name="food_id">5</item>
+        <item name="food_name">Taco</item>
+        <item name="food_category">Latin</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">5</item>
+    </string-array>
+    <string-array name="food7">
+        <item name="food_id">6</item>
+        <item name="food_name">Burrito</item>
+        <item name="food_category">Latin</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">6</item>
+    </string-array>
+    <string-array name="food8">
+        <item name="food_id">7</item>
+        <item name="food_name">Chimichonga</item>
+        <item name="food_category">Latin</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">7</item>
+    </string-array>
+    <string-array name="food9">
+        <item name="food_id">8</item>
+        <item name="food_name">Juevos Rancheros</item>
+        <item name="food_category">Latin</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Breakfast Food</item>
+        <item name="food_photo_id">8</item>
+    </string-array>
+    <string-array name="food10">
+        <item name="food_id">9</item>
+        <item name="food_name">Churro</item>
+        <item name="food_category">Latin</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Dessert</item>
+        <item name="food_photo_id">9</item>
+    </string-array>
+    <string-array name="food11">
+        <item name="food_id">10</item>
+        <item name="food_name"></item>
+        <item name="food_category">Japanese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">10</item>
+    </string-array>
+    <string-array name="food12">
+        <item name="food_id">11</item>
+        <item name="food_name"></item>
+        <item name="food_category">Japanese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">11</item>
+    </string-array>
+    <string-array name="food13">
+        <item name="food_id">12</item>
+        <item name="food_name"></item>
+        <item name="food_category">Japanese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Breakfast Food</item>
+        <item name="food_photo_id">12</item>
+    </string-array>
+    <string-array name="food14">
+        <item name="food_id">13</item>
+        <item name="food_name"></item>
+        <item name="food_category">Japanese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">13</item>
+    </string-array>
+    <string-array name="food15">
+        <item name="food_id">14</item>
+        <item name="food_name"></item>
+        <item name="food_category">Japanese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Dessert</item>
+        <item name="food_photo_id">14</item>
+    </string-array>
+    <string-array name="food16">
+        <item name="food_id">15</item>
+        <item name="food_name"></item>
+        <item name="food_category">French</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">15</item>
+    </string-array>
+    <string-array name="food17">
+        <item name="food_id">16</item>
+        <item name="food_name"></item>
+        <item name="food_category">French</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">16</item>
+    </string-array>
+    <string-array name="food18">
+        <item name="food_id">17</item>
+        <item name="food_name"></item>
+        <item name="food_category">French</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">17</item>
+    </string-array>
+    <string-array name="food19">
+        <item name="food_id">18</item>
+        <item name="food_name"></item>
+        <item name="food_category">French</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">18</item>
+    </string-array>
+    <string-array name="food20">
+        <item name="food_id">19</item>
+        <item name="food_name"></item>
+        <item name="food_category">French</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Dessert</item>
+        <item name="food_photo_id">19</item>
+    </string-array>
+    <string-array name="food21">
+        <item name="food_id">20</item>
+        <item name="food_name"></item>
+        <item name="food_category">Indian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">20</item>
+    </string-array>
+    <string-array name="food22">
+        <item name="food_id">21</item>
+        <item name="food_name"></item>
+        <item name="food_category">Indian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">21</item>
+    </string-array>
+    <string-array name="food23">
+        <item name="food_id">22</item>
+        <item name="food_name"></item>
+        <item name="food_category">Indian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Breakfast Food</item>
+        <item name="food_photo_id">22</item>
+    </string-array>
+    <string-array name="food24">
+        <item name="food_id">23</item>
+        <item name="food_name"></item>
+        <item name="food_category">Indian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">23</item>
+    </string-array>
+    <string-array name="food25">
+        <item name="food_id">24</item>
+        <item name="food_name"></item>
+        <item name="food_category">Indian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Dessert</item>
+        <item name="food_photo_id">24</item>
+    </string-array>
+    <string-array name="food26">
+        <item name="food_id">25</item>
+        <item name="food_name"></item>
+        <item name="food_category">Italian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">25</item>
+    </string-array>
+    <string-array name="food27">
+        <item name="food_id">26</item>
+        <item name="food_name"></item>
+        <item name="food_category">Italian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">26</item>
+    </string-array>
+    <string-array name="food28">
+        <item name="food_id">27</item>
+        <item name="food_name"></item>
+        <item name="food_category">Italian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">27</item>
+    </string-array>
+    <string-array name="food29">
+        <item name="food_id">28</item>
+        <item name="food_name"></item>
+        <item name="food_category">Italian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">28</item>
+    </string-array>
+    <string-array name="food30">
+        <item name="food_id">29</item>
+        <item name="food_name"></item>
+        <item name="food_category">Italian</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Dessert</item>
+        <item name="food_photo_id">29</item>
+    </string-array>
+    <string-array name="food31">
+        <item name="food_id">30</item>
+        <item name="food_name"></item>
+        <item name="food_category">Chinese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">30</item>
+    </string-array>
+    <string-array name="food32">
+        <item name="food_id">31</item>
+        <item name="food_name"></item>
+        <item name="food_category">Chinese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">31</item>
+    </string-array>
+    <string-array name="food33">
+        <item name="food_id">32</item>
+        <item name="food_name"></item>
+        <item name="food_category">Chinese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">32</item>
+    </string-array>
+    <string-array name="food34">
+        <item name="food_id">33</item>
+        <item name="food_name"></item>
+        <item name="food_category">Chinese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag"></item>
+        <item name="food_photo_id">33</item>
+    </string-array>
+    <string-array name="food35">
+        <item name="food_id">34</item>
+        <item name="food_name"></item>
+        <item name="food_category">Chinese</item>
+        <item name="food_fav">false</item>
+        <item name="food_tag">Dessert</item>
+        <item name="food_photo_id">34</item>
+    </string-array>
+</resources>
