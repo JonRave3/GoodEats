@@ -17,9 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         SharedPrefs.init(this);
         SharedPreferences.Editor spe = SharedPrefs.getPrefs().edit();
+        SQLSingleton.init(this, new DBConnection(this));
         //setup the database
-        sqLiteDatabase = new DBConnection(this).getWritableDatabase();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

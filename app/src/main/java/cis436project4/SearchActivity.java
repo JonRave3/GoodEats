@@ -10,11 +10,10 @@ import android.os.Bundle;
 import goodeats.cis436project4.R;
 
 public class SearchActivity extends AppCompatActivity
-                            implements SearchFragment.OnSearchFragmentInteractionListener {
+                            implements SearchFragment.OnSearchFragmentInteractionListener, SearchResultsFragment.OnSearchParamsChangedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SharedPrefs.init(this);
         super.onCreate(savedInstanceState);
         //don't start activity if in landscape orientation
         /*if(getResources().getConfiguration().getLayoutDirection()== Configuration.ORIENTATION_LANDSCAPE)
@@ -25,13 +24,19 @@ public class SearchActivity extends AppCompatActivity
         if(savedInstanceState == null)
         {
             SearchFragment searchFragment = new SearchFragment();
-            searchFragment.setArguments(getIntent().getExtras());
+            Bundle extras = getIntent().getExtras();
+            searchFragment.setArguments(extras);
             getSupportFragmentManager().beginTransaction().add(searchFragment,"searchFragment").commit();
         }
     }
 
     @Override
-    public void onSearchFragmentInteraction(Uri uri) {
+    public void onSearchFragmentInteraction() {
+        //used to communicate with SearchResultsFragment
+    }
+
+    @Override
+    public void onSearchParamsChange(Uri uri) {
         //used to communicate with SearchResultsFragment
     }
 }

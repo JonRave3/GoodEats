@@ -60,7 +60,6 @@ public class ClassListFragment extends ListFragment {
 
             if(cdf == null || cdf.index() != id)
             {
-                //fragments are not dynamically allocated - cannot use fragmentTransactions
                 cdf = ClassDetailsFragment.newInstance(id);
                 FragmentTransaction fm = getFragmentManager().beginTransaction();
                 fm.replace(R.id.class_details_fragment, cdf).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();

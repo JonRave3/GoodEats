@@ -1,5 +1,6 @@
 package cis436project4;
 
+import android.database.Cursor;
 import android.provider.BaseColumns;
 
 /**
@@ -16,5 +17,16 @@ public class FoodTableContract {
         public static final String FOODS_FAVORITED = "Favorited";
         public static final String FOODS_PHOTO_ID = "Photo_Id";
         public static final String FOODS_LINK = "Link";
+
+        public static final String GET_ALL_RECORDS = "SELECT * FROM " + TABLE_NAME + ";";
+
+        public static String selectStr(String[] args){
+            String statement = "SELECT ";
+            for(int i=0; i < args.length; i++){
+                statement += (args[i] + (i != args.length-1 ? ", " : ""));
+            }
+            statement += ("FROM " + TABLE_NAME + ";");
+            return statement;
+        }
     }
 }

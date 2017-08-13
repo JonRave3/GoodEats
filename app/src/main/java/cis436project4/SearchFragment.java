@@ -1,7 +1,6 @@
 package cis436project4;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +31,8 @@ public class SearchFragment extends Fragment {
     private StaggeredGridLayoutManager layoutManager;
     private EditText search_editText;
     private Button search_btn;
+    private List<Chip> chipList;
+    private RecyclerView recyclerView;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -48,29 +49,50 @@ public class SearchFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //add chips to the view
-        RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.chip_recycler_view);
-        recyclerView.setHasFixedSize(true);
+        recyclerView = (RecyclerView) getActivity().findViewById(R.id.chip_recycler_view);
+        recyclerView.setHasFixedSize(false);
 
-        layoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+        layoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        List<Chip> chipList = getChipList();
 
-        ChipRecycleViewAdapter chipRecycleViewAdapter = new ChipRecycleViewAdapter(getContext(), chipList);
+        ChipRecycleViewAdapter chipRecycleViewAdapter = new ChipRecycleViewAdapter(getContext());
         recyclerView.setAdapter(chipRecycleViewAdapter);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        search_editText = (EditText) container.findViewById(R.id.search_input_editText);
+        search_btn = (Button) container.findViewById(R.id.search_submit_btn);
+        search_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onButtonPressed();
+            }
+        });
         return inflater.inflate(R.layout.fragment_search, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed() {
         if (mListener != null) {
-            mListener.onSearchFragmentInteraction(uri);
+            //get the search params
+            String[] params = search_editText.getText().toString().split(" ");
+            //get the categories from the remaining chips
+            int categories = recyclerView.getAdapter().getItemCount();
+            ArrayList<View> cats = recyclerView.getTouchables();
+            String[] selectors = new String[categories];
+            TextView categoryName;
+            for(int i = 0; i < categories; i++){
+                categoryName = (TextView) cats.get(i).findViewById(R.id.chip_name);
+                selectors[i] = categoryName.getText().toString();
+            }
+            //build a new query
+            String rawQuery = FoodTableContract.FoodEntry.selectStr(params);
+            SQLSingleton.selectQuery(rawQuery, selectors);
+
+            mListener.onSearchFragmentInteraction();
         }
     }
 
@@ -103,18 +125,7 @@ public class SearchFragment extends Fragment {
      */
     public interface OnSearchFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onSearchFragmentInteraction(Uri uri);
+        void onSearchFragmentInteraction();
     }
 
-    private List<Chip> getChipList(){
-        List<Chip> chips = new ArrayList<Chip>();
-        chips.add(new Chip("American"));
-        chips.add(new Chip("Latin"));
-        chips.add(new Chip("Italian"));
-        chips.add(new Chip("French"));
-        chips.add(new Chip("Chinese"));
-        chips.add(new Chip("Indian"));
-        chips.add(new Chip("Japanese"));
-        return chips;
-    }
 }

@@ -18,12 +18,14 @@ import goodeats.cis436project4.R;
 
 public class ChipRecycleViewAdapter extends RecyclerView.Adapter {
 
-    private List<Chip> chipList;
+    List<String> chipList;
     private Context context;
 
-    public ChipRecycleViewAdapter(Context con, List l) {
+    public ChipRecycleViewAdapter(Context con) {
         context = con;
-        chipList = l;
+        for(String s : Chip.category){
+            chipList.add(s);
+        }
     }
 
     @Override
@@ -36,12 +38,11 @@ public class ChipRecycleViewAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ChipHolder chipHolder = (ChipHolder) holder;
         //TODO create POJO for chips
-        chipHolder.chipName.setText(chipList.get(position).getCategory());
+        chipHolder.chipName.setText(Chip.category[position]);
         chipHolder.deleteIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.GONE);
-                //TODO reconduct the search without this chip
             }
         });
     }
@@ -49,6 +50,7 @@ public class ChipRecycleViewAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return this.chipList.size();
     }
+
 
 
     public class ChipHolder extends RecyclerView.ViewHolder {

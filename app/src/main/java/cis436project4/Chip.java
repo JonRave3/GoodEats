@@ -5,14 +5,7 @@ package cis436project4;
  */
 
 public class Chip {
-    String category;
-    public Chip(String category){
-        this.category = category;
-    }
-    public String getCategory(){
-        return this.category;
-    }
-    public void setCategory(String category){
-        this.category = category;
-    }
+    public static String[] category = {
+        "American", "Latin", "Japanese", "French", "Indian", "Italian", "Chinese"
+    };
 }
