@@ -15,6 +15,6 @@ public class FoodTableContract {
         public static final String FOODS_CATEGORY = "Category";
         public static final String FOODS_FAVORITED = "Favorited";
         public static final String FOODS_PHOTO_ID = "Photo_Id";
-        public static final String FOODS_TAGS = "Tags";
+        public static final String FOODS_LINK = "Link";
     }
 }

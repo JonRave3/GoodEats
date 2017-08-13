@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/filter_chip"
+    android:paddingTop="@dimen/padding_top"
+    android:paddingBottom="@dimen/padding_top"
+    android:id="@+id/chip_container">
+
+    <TextView
+        android:id="@+id/chip_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/chip_padding"
+        android:text="Example chip"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/chip_delete"
+        android:layout_width="@dimen/remove_icon_dimen"
+        android:layout_height="@dimen/remove_icon_dimen"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/chip_name"
+        android:contentDescription="@null"
+        android:padding="@dimen/remove_icon_margin"
+        android:layout_marginRight="@dimen/remove_icon_margin"
+        android:src="@drawable/delete" />
+</RelativeLayout>

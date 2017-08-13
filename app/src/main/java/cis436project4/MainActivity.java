@@ -11,7 +11,6 @@ import goodeats.cis436project4.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    DBConnection dbConnection;
     private static SQLiteDatabase sqLiteDatabase;
 
     @Override
@@ -19,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPrefs.init(this);
         SharedPreferences.Editor spe = SharedPrefs.getPrefs().edit();
         //setup the database
-        dbConnection = new DBConnection(getBaseContext());
-        sqLiteDatabase = dbConnection.getWritableDatabase();
+        sqLiteDatabase = new DBConnection(this).getWritableDatabase();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

@@ -13,24 +13,22 @@ import java.util.ArrayList;
 
 import goodeats.cis436project4.R;
 
-/**
- * Created by JRavelo on 8/8/2017.
- */
-
 public class DBConnection extends SQLiteOpenHelper {
 
+    private static final String DB_NAME = "GoodEats.db";
     private static final String SQL_CREATE_TABLE =
-            "CREATE TABLE " + FoodTableContract.FoodEntry.TABLE_NAME + " (" +
+            "CREATE TABLE " +
+                    FoodTableContract.FoodEntry.TABLE_NAME + " (" +
                     FoodTableContract.FoodEntry.FOODS_INDEX + " INTEGER PRIMARY KEY, " +
                     FoodTableContract.FoodEntry.FOODS_NAME + " TEXT, " +
                     FoodTableContract.FoodEntry.FOODS_CATEGORY + " TEXT, " +
                     FoodTableContract.FoodEntry.FOODS_FAVORITED + " TEXT, " +
-                    FoodTableContract.FoodEntry.FOODS_TAGS  + " TEXT, " +
+                    FoodTableContract.FoodEntry.FOODS_LINK  + " TEXT, " +
                     FoodTableContract.FoodEntry.FOODS_PHOTO_ID + " INTEGER)";
+
     private static final String SQL_DELETE_TABLE =
             "DROP TABLE IF EXISTS " + FoodTableContract.FoodEntry.TABLE_NAME;
     private Resources res;
-    private static final String DB_NAME = "GoodEats.db";
 
     public DBConnection(Context context) {
         super(context, DB_NAME, null, 1);
@@ -50,6 +48,7 @@ public class DBConnection extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_TABLE);
         onCreate(db);
     }
+
     private void loadFoodTable()
     {
         loadAmericanFoods();
@@ -66,7 +65,7 @@ public class DBConnection extends SQLiteOpenHelper {
         cv.put(FoodTableContract.FoodEntry.FOODS_NAME, foodRec[1]);
         cv.put(FoodTableContract.FoodEntry.FOODS_CATEGORY, foodRec[2]);
         cv.put(FoodTableContract.FoodEntry.FOODS_FAVORITED, foodRec[3]);
-        cv.put(FoodTableContract.FoodEntry.FOODS_TAGS, foodRec[4]);
+        cv.put(FoodTableContract.FoodEntry.FOODS_LINK, foodRec[4]);
         cv.put(FoodTableContract.FoodEntry.FOODS_PHOTO_ID, foodRec[5]);
         return cv;
     }
