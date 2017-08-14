@@ -22,12 +22,14 @@ public class SearchResultsFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //TODO still neede to fix onCreate
         foodAdapter = new FoodAdapter(getActivity(), R.layout.fragment_search_results, FoodList.getList());
         setListAdapter(foodAdapter);
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //TODO stll need to fix onCreateView to render correctly
         View fragment = inflater.inflate(R.layout.fragment_search_results, container, false);
 
         setListAdapter(foodAdapter);
