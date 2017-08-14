@@ -16,9 +16,6 @@ public class FoodList extends ArrayList<Food> {
     public FoodList(){
         super(MAX_SIZE);
     }
-    public FoodList(Collection<Food> foods){
-        addAll(foods);
-    }
     public static FoodList getList(){
         return foodList;
     }

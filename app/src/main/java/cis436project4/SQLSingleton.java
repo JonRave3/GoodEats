@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.annotation.IntegerRes;
-import android.support.annotation.NonNull;
 
 import goodeats.cis436project4.R;
 
@@ -21,7 +19,6 @@ public class SQLSingleton {
     private static Resources res;
 
     public static void init(Context cont, DBConnection dbConn){
-        res = context.getResources();
         if(dbConn == null){
             dbc = new DBConnection(cont);
         }
@@ -35,6 +32,7 @@ public class SQLSingleton {
             sqlReader = dbc.getReadableDatabase();
         }
         context = cont;
+        res = context.getResources();
         loadFoodTable();
     }
     public static SQLiteDatabase getSqlWriter(){
@@ -63,8 +61,9 @@ public class SQLSingleton {
             FoodList.getList().add(newFood);
         }
     }//end of getAllRecords()
-    protected static void selectQuery(String selectStatement, String[] selectors){
-        Cursor cursor = sqlReader.rawQuery(selectStatement, selectors);
+    protected static void selectQuery(String selectStatement){
+        Cursor cursor = sqlReader.rawQuery(selectStatement, null);
+        FoodList.getList().clear();
         Food newFood = null;
         while(cursor.moveToNext()){
             newFood = new Food();
@@ -108,8 +107,7 @@ public class SQLSingleton {
     //DELETE METHODS
 
 
-    private static void loadFoodTable()
-    {
+    private static void loadFoodTable() {
         loadAmericanFoods();
         loadLatinFoods();
         loadJapaneseFoods();
@@ -120,7 +118,7 @@ public class SQLSingleton {
     }
     private static ContentValues getContentValues(String[] foodRec){
         ContentValues cv = new ContentValues();
-        cv.put(FoodTableContract.FoodEntry.FOODS_INDEX, foodRec[0]);
+        //cv.put(FoodTableContract.FoodEntry.FOODS_INDEX, foodRec[0]);
         cv.put(FoodTableContract.FoodEntry.FOODS_NAME, foodRec[1]);
         cv.put(FoodTableContract.FoodEntry.FOODS_CATEGORY, foodRec[2]);
         cv.put(FoodTableContract.FoodEntry.FOODS_FAVORITED, foodRec[3]);
@@ -130,7 +128,7 @@ public class SQLSingleton {
     }
     private static ContentValues getContentValues(Food foodRec){
         ContentValues cv = new ContentValues();
-        cv.put(FoodTableContract.FoodEntry.FOODS_INDEX, Integer.toString(foodRec.index));
+        //cv.put(FoodTableContract.FoodEntry.FOODS_INDEX, Integer.toString(foodRec.index));
         cv.put(FoodTableContract.FoodEntry.FOODS_NAME, foodRec.name);
         cv.put(FoodTableContract.FoodEntry.FOODS_CATEGORY, foodRec.category);
         cv.put(FoodTableContract.FoodEntry.FOODS_FAVORITED, Boolean.toString(foodRec.favorite));

@@ -1,8 +1,5 @@
 package cis436project4;
 
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,10 +30,11 @@ public class SearchActivity extends AppCompatActivity
     @Override
     public void onSearchFragmentInteraction() {
         //used to communicate with SearchResultsFragment
+
     }
 
     @Override
-    public void onSearchParamsChange(Uri uri) {
+    public void onSearchParamsChange() {
         //used to communicate with SearchResultsFragment
     }
 }

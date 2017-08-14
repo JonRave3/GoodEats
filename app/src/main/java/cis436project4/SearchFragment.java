@@ -1,15 +1,19 @@
 package cis436project4;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +35,8 @@ public class SearchFragment extends Fragment {
     private StaggeredGridLayoutManager layoutManager;
     private EditText search_editText;
     private Button search_btn;
-    private List<Chip> chipList;
     private RecyclerView recyclerView;
+    private ChipRecycleViewAdapter chipRecycleViewAdapter;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -44,54 +48,48 @@ public class SearchFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        //add chips to the view
-        recyclerView = (RecyclerView) getActivity().findViewById(R.id.chip_recycler_view);
-        recyclerView.setHasFixedSize(false);
-
-        layoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
-
-        ChipRecycleViewAdapter chipRecycleViewAdapter = new ChipRecycleViewAdapter(getContext());
-        recyclerView.setAdapter(chipRecycleViewAdapter);
+        init(this.getContext());
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        search_editText = (EditText) container.findViewById(R.id.search_input_editText);
-        search_btn = (Button) container.findViewById(R.id.search_submit_btn);
+        View fragment = inflater.inflate(R.layout.fragment_search, container, false);
+        recyclerView = (RecyclerView) fragment.findViewById(R.id.chip_recycler_view);
+        search_editText = (EditText) fragment.findViewById(R.id.search_input_editText);
+        search_btn = (Button) fragment.findViewById(R.id.search_submit_btn);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(chipRecycleViewAdapter);
+
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onButtonPressed();
             }
         });
-        return inflater.inflate(R.layout.fragment_search, container, false);
+        return fragment;
+    }
+
+    private void init(Context context){
+        layoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+        chipRecycleViewAdapter = new ChipRecycleViewAdapter(context);
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed() {
-        if (mListener != null) {
-            //get the search params
-            String[] params = search_editText.getText().toString().split(" ");
-            //get the categories from the remaining chips
-            int categories = recyclerView.getAdapter().getItemCount();
-            ArrayList<View> cats = recyclerView.getTouchables();
-            String[] selectors = new String[categories];
-            TextView categoryName;
-            for(int i = 0; i < categories; i++){
-                categoryName = (TextView) cats.get(i).findViewById(R.id.chip_name);
-                selectors[i] = categoryName.getText().toString();
-            }
-            //build a new query
-            String rawQuery = FoodTableContract.FoodEntry.selectStr(params);
-            SQLSingleton.selectQuery(rawQuery, selectors);
+        //get the search params
+        String[] params = search_editText.getText().toString().split(" ");
+        //get the categories from the remaining chips
+        String[] selectors = chipRecycleViewAdapter.getChipListToArray();
+        //build a new query
+        String rawQuery = FoodTableContract.FoodEntry.selectStr(params, selectors);
+        SQLSingleton.selectQuery(rawQuery);
 
+        if (mListener != null) {
             mListener.onSearchFragmentInteraction();
         }
     }

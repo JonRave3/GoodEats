@@ -20,12 +20,15 @@ public class FoodTableContract {
 
         public static final String GET_ALL_RECORDS = "SELECT * FROM " + TABLE_NAME + ";";
 
-        public static String selectStr(String[] args){
-            String statement = "SELECT ";
-            for(int i=0; i < args.length; i++){
-                statement += (args[i] + (i != args.length-1 ? ", " : ""));
+        public static String selectStr(String[] foodNames, String[] categories){
+            String statement = "SELECT * FROM " + TABLE_NAME + " WHERE ";
+            for(int i = 0; i < foodNames.length; i++){
+                statement += ("(" + FOODS_NAME + " LIKE '%" + foodNames[i] + "%') " + ( i != foodNames.length-1 ? "OR ": " "));
             }
-            statement += ("FROM " + TABLE_NAME + ";");
+            statement += ("GROUP BY " + FOODS_NAME + " HAVING ");
+            for(int j = 0; j < categories.length; j++){
+                statement += ("(" + FOODS_CATEGORY + " = '" + categories[j] + "') " + (j != categories.length-1 ? "OR " : ";"));
+            }
             return statement;
         }
     }

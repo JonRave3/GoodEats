@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cis436project4.MainActivity">
-    <fragment
+   <!-- <fragment
         android:name="cis436project4.ClassListFragment"
         android:id="@+id/class_list_fragment"
         android:layout_width="match_parent"
@@ -13,6 +13,18 @@
         android:layout_weight="1"/>
     <FrameLayout
         android:id="@+id/class_details_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>-->
+    <fragment
+        android:name="cis436project4.SearchFragment"
+        android:id="@+id/search_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <fragment
+        android:name="cis436project4.SearchResultsFragment"
+        android:id="@+id/search_results_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>

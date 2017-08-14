@@ -1,15 +1,8 @@
 package cis436project4;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.BaseColumns;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 import goodeats.cis436project4.R;
 
