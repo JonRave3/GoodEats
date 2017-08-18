@@ -5,29 +5,20 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cis436project4.SearchActivity">
+    tools:context="cis436project4.FavoritesActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar_home" />
         <fragment
-            android:name="cis436project4.SearchFragment"
-            android:id="@+id/search_fragment"
+            android:name="cis436project4.FavoriteListFragment"
+            android:id="@+id/favorite_list_fragment"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_search" />
-        <fragment
-            android:name="cis436project4.SearchResultsFragment"
-            android:id="@+id/search_results_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            tools:layout="@layout/fragment_search_results" />
+            android:layout_height="match_parent" />
     </LinearLayout>
 
     <FrameLayout
@@ -42,5 +33,5 @@
             android:scrollbars="vertical" />
     </FrameLayout>
 
+
 </android.support.v4.widget.DrawerLayout>
-<!-- Done -->

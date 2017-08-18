@@ -4,7 +4,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="12dp"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="50dp"
     tools:context="cis436project4.FoodCardFragment">
     <TextView
         android:id="@+id/foodName_fc_textView"
@@ -17,7 +24,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/fav_unchecked"
-        android:layout_alignParentEnd="true"/>
+        android:layout_below="@+id/food_fc_imgView"
+        android:layout_alignParentEnd="true" />
     <ImageView
         android:id="@+id/food_fc_imgView"
         android:layout_width="match_parent"

@@ -2,26 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cis436project4.MainFragment">
+    tools:context="cis436project4.MainFragment"
+    android:padding="12dp"
+    android:paddingTop="24dp">
     <Button
         android:id="@+id/rand_search_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Lucky"
+        android:text="@string/random"
         android:textSize="30sp"
         android:background="@drawable/search_button"
         android:padding="12dp"
         android:layout_centerHorizontal="true"/>
 
-    <Button
-        android:id="@+id/start_search_activity_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/search_button"
-        android:padding="12sp"
-        android:text="Search"
-        android:textSize="30sp"
-        android:layout_below="@+id/rand_search_btn"
-        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

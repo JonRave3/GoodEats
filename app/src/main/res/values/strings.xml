@@ -2,5 +2,11 @@
     <string name="app_name">Good Eats</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-
+    <string name="search">Search</string>
+    <string name="history">History</string>
+    <string name="random">Get Lucky!</string>
+    <string name="home">Home</string>
+    <string name="open_drawer">Drawer Open</string>
+    <string name="close_drawer">Drawer Close</string>
+    <string name="empty_list">Uh-Oh! You don\'t have any favorites!</string>
 </resources>

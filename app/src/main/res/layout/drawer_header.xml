@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="8dp"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="203dp"
+        android:layout_height="96dp"
+        android:layout_gravity="left|top"
+        android:src="@drawable/ic_profile"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/nameTxt" />
+
+    <TextView
+        android:id="@+id/nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Jonnathen Ravelo"
+        android:layout_below="@+id/profileImageView"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/emailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jravelo@umich.edu"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:layout_below="@+id/nameTxt"
+        android:layout_alignParentStart="true"/>
+</RelativeLayout>

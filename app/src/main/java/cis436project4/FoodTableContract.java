@@ -20,6 +20,9 @@ public class FoodTableContract {
 
         public static final String GET_ALL_RECORDS = "SELECT * FROM " + TABLE_NAME + ";";
 
+        public static final String FAVORITE_SELECT_STR = "SELECT * FROM " + TABLE_NAME +
+                " WHERE " + FOODS_FAVORITED + " = 'true';";
+
         public static String searchSelectStr(String[] foodNames, String[] categories){
             String statement = "SELECT * FROM " + TABLE_NAME + " WHERE ";
             if(foodNames != null && foodNames.length > 0 && foodNames[0] != ""){
@@ -47,7 +50,7 @@ public class FoodTableContract {
         public static String favoriteUpdateStr(String val, String recordID, String foodName) {
             String statement = "UPDATE " + TABLE_NAME +
                     " SET " + FOODS_FAVORITED + " = '" + val + "' " +
-                    "WHERE " + FOODS_INDEX + " = '" + recordID + "' AND " +
+                    "WHERE " + FOODS_INDEX + " = " + recordID + " AND " +
                     FOODS_NAME + " = '" + foodName + "';";
             return statement;
         }

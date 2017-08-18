@@ -1,19 +1,16 @@
 package cis436project4;
 
 import android.app.FragmentTransaction;
-import android.content.ContentValues;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import goodeats.cis436project4.R;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.OnRandButtonPressed{
+public class MainActivity extends AppCompatActivity implements MainFragment.OnRandButtonPressed, DrawerMenuItem.DrawerCallBack {
 
-    protected static SQLiteDatabase sqLiteDatabase;
+    protected Drawer mDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnRa
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mDrawer = new Drawer(this);
     }//end of onCreate()
 
     @Override
@@ -37,4 +35,33 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnRa
             fcf.updateView(record);
         }
     }
+
+    @Override
+    public void onSearchMenuSelected() {
+        mDrawer.closeDrawer();
+        Intent searchActivity = new Intent(this, SearchActivity.class);
+        startActivity(searchActivity);
+        finish();
+    }
+
+    @Override
+    public void onFavoritesMenuSelected() {
+        mDrawer.closeDrawer();
+        Intent favoritesActivity =  new Intent(this, FavoritesActivity.class);
+        //start Favorites intent;
+        startActivity(favoritesActivity);
+        finish();
+    }
+
+    @Override
+    public void onHomeMenuSelected() {
+        mDrawer.closeDrawer();
+    }
+
+    @Override
+    public void onExitMenuSelected() {
+        this.finish();
+    }
+
+
 }

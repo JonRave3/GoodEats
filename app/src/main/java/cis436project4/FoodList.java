@@ -13,6 +13,7 @@ public class FoodList extends ArrayList<Food> {
 
     public static final int MAX_SIZE = 20;
     private static FoodList foodList = new FoodList();
+    private static FoodList favList = new FoodList();
 
     public FoodList(){
         super(MAX_SIZE);
@@ -20,4 +21,5 @@ public class FoodList extends ArrayList<Food> {
     public static FoodList getList(){
         return foodList;
     }
+    public static FoodList getFavList() { return favList; }
 }

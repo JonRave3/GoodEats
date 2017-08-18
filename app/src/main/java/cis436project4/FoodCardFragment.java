@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Date;
+import java.util.Random;
+
 import goodeats.cis436project4.R;
 
 
@@ -41,8 +44,14 @@ public class FoodCardFragment extends Fragment {
                              Bundle savedInstanceState) {
         View fragment = inflater.inflate(R.layout.fragment_food_card, container, false);
         init(fragment);
+        int rand_index;
+        while((rand_index = getNewFoodID()) > 19){
+            //re-roll if the index is out of range; 1-19 (inclusive)
+            ;
+        }
+        String randId = Integer.toString(rand_index);
         //initialize with first record
-        Food record = SQLSingleton.selectRandQuery(FoodTableContract.FoodEntry.randSearchSelectStr("1"));
+        Food record = SQLSingleton.selectRandQuery(FoodTableContract.FoodEntry.randSearchSelectStr(randId));
         updateView(record);
         return fragment;
     }
@@ -69,9 +78,13 @@ public class FoodCardFragment extends Fragment {
                     record.favorite = true;
                     icon.setImageResource(R.drawable.fav_checked);
                 }
-                String updateStr = FoodTableContract.FoodEntry.favoriteUpdateStr(Boolean.toString(record.favorite), Integer.toString(record.index), record.name);
-                SQLSingleton.updateRecord(updateStr);
+                //String updateStr = FoodTableContract.FoodEntry.favoriteUpdateStr(Boolean.toString(record.favorite), Integer.toString(record.index), record.name);
+                SQLSingleton.updateRecord(record.index, FoodTableContract.FoodEntry.FOODS_FAVORITED, Boolean.toString(record.favorite));
             }
         });
+    }
+    public int getNewFoodID() {
+        return new Random(new Date().getTime()).nextInt(18) + 1;
+        //query the DB for the food with index = n
     }
 }

@@ -18,7 +18,7 @@ import goodeats.cis436project4.R;
 
 public class MainFragment extends Fragment {
 
-    Button searchRandBtn, startSearchActivity;
+    Button searchRandBtn;
     private OnRandButtonPressed mListener;
 
     public MainFragment() {
@@ -60,21 +60,12 @@ public class MainFragment extends Fragment {
                 }
             }
         });
-        startSearchActivity = (Button) fragment.findViewById(R.id.start_search_activity_btn);
-        startSearchActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent searchActivity = new Intent(getActivity(), SearchActivity.class);
-                startActivity(searchActivity);
-            }
-        });
+
         return fragment;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public int getNewFoodID() {
         return new Random(new Date().getTime()).nextInt(18) + 1;
-        //query the DB for the food with index = n
     }
 
     @Override

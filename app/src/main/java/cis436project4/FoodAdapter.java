@@ -36,7 +36,7 @@ public class FoodAdapter extends ArrayAdapter<Food> {
         this.data = objects;
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(final int position, View convertView, ViewGroup parent){
         if(position >= data.size())
             return null;
         View card = convertView;
@@ -55,13 +55,6 @@ public class FoodAdapter extends ArrayAdapter<Food> {
 
         final Food food = data.get(position);
         foodHolder.foodName.setText(food.name);
-        foodHolder.foodName.setClickable(true);
-        foodHolder.foodName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO start a google search!
-            }
-        });
         foodHolder.foodCategory.setText(food.category);
         if(food.favorite){
             foodHolder.foodFavorite.setImageResource(R.drawable.fav_checked);
@@ -70,7 +63,6 @@ public class FoodAdapter extends ArrayAdapter<Food> {
         }
         foodHolder.foodFavorite.setClickable(true);
         foodHolder.foodFavorite.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 ImageView icon = (ImageView) v;
@@ -82,8 +74,9 @@ public class FoodAdapter extends ArrayAdapter<Food> {
                     food.favorite = true;
                     icon.setImageResource(R.drawable.fav_checked);
                 }
-                String updateStr = FoodTableContract.FoodEntry.favoriteUpdateStr(Boolean.toString(food.favorite), Integer.toString(food.index), food.name);
-                SQLSingleton.updateRecord(updateStr);
+                //String updateStr = FoodTableContract.FoodEntry.favoriteUpdateStr(Boolean.toString(food.favorite), Integer.toString(food.index), food.name);
+                data.get(position).favorite = food.favorite;
+                SQLSingleton.updateRecord(food.index, FoodTableContract.FoodEntry.FOODS_FAVORITED, Boolean.toString(food.favorite));
             }
         });
         int imgResourceId = context.getResources().getIdentifier(food.image, "mipmap", context.getPackageName());

@@ -12,15 +12,14 @@
     <EditText
         android:id="@+id/search_input_editText"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginRight="5dp"
-        android:hint="flap jacks, big mac, etc."
+        android:hint="Chicken, Sushi, etc."
         android:inputType="text"
-        android:layout_alignBottom="@+id/search_submit_btn"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/search_submit_btn" />
+        android:layout_alignParentTop="true"/>
 
     <Button
         android:id="@+id/search_submit_btn"
@@ -28,7 +27,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/search_button"
         android:text="Search"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/chip_recycler_view"
         android:layout_alignParentEnd="true" />
     <Button
         android:id="@+id/reset_btn"
