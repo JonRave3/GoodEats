@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context="cis436project4.FoodCardFragment">
+    <TextView
+        android:id="@+id/foodName_fc_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:textSize="30sp"/>
+    <ImageView
+        android:id="@+id/foodFav_fc_imgView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/fav_unchecked"
+        android:layout_alignParentEnd="true"/>
+    <ImageView
+        android:id="@+id/food_fc_imgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/foodName_fc_textView"
+        android:layout_above="@+id/foodCategory_fc_textView" />
+    <TextView
+        android:id="@+id/foodCategory_fc_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Category"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/foodName_fc_textView" />
+
+</RelativeLayout>

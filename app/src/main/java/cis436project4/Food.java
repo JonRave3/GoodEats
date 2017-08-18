@@ -7,7 +7,7 @@ import android.content.res.Resources;
 
 public class Food {
 
-    int index, image;
-    String name, category, link;
+    int index;
+    String name, category, link, image;
     boolean favorite;
 }

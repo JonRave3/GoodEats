@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cis436project4.SearchResultsFragment"
-    android:orientation="vertical">
+    android:orientation="vertical" >
     <ListView
-        android:id="@+id/search_result_listView"
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </ListView>

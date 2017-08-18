@@ -5,8 +5,6 @@
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
     android:background="@drawable/filter_chip"
-    android:paddingTop="@dimen/padding_top"
-    android:paddingBottom="@dimen/padding_top"
     android:id="@+id/chip_container">
 
     <TextView
@@ -16,7 +14,8 @@
         android:layout_centerVertical="true"
         android:paddingLeft="@dimen/chip_padding"
         android:text="Example chip"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryLight"/>
 
     <ImageView
         android:id="@+id/chip_delete"
@@ -25,7 +24,6 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/chip_name"
         android:contentDescription="@null"
-        android:padding="@dimen/remove_icon_margin"
-        android:layout_marginRight="@dimen/remove_icon_margin"
+        android:layout_marginLeft="2dp"
         android:src="@drawable/delete" />
 </RelativeLayout>

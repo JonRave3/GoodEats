@@ -1,283 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="food1">
+    <string-array name="food0">
         <item name="food_id">0</item>
         <item name="food_name">Cheese Burger</item>
         <item name="food_category">American</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id"></item>
+        <item name="food_link">http://www.foodrepublic.com/recipes/all-american-cheeseburger-recipe/</item>
+        <item name="food_photo_id">cheese_burger.png</item>
     </string-array>
-    <string-array name="food2">
+    <string-array name="food1">
         <item name="food_id">1</item>
         <item name="food_name">Hot Dog</item>
         <item name="food_category">American</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">1</item>
+        <item name="food_link">http://www.food.com/ideas/unique-hot-dog-recipes-6256?c=17434</item>
+        <item name="food_photo_id">hot_dog</item>
+    </string-array>
+    <string-array name="food2">
+        <item name="food_id">2</item>
+        <item name="food_name">Chicago Deep Dish pizza</item>
+        <item name="food_category">American</item>
+        <item name="food_fav">false</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/chicago-style-deep-dish-pizzas-3645832</item>
+        <item name="food_photo_id">chicago_style_deep_dish_pizza</item>
     </string-array>
     <string-array name="food3">
-        <item name="food_id">2</item>
-        <item name="food_name">Flap Jacks</item>
-        <item name="food_category">American</item>
+        <item name="food_id">3</item>
+        <item name="food_name">Spinach Enchiladas</item>
+        <item name="food_category">Latin</item>
         <item name="food_fav">false</item>
-        <item name="food_link">Breakfast Food</item>
-        <item name="food_photo_id">2</item>
+        <item name="food_link">http://allrecipes.com/recipe/59661/spinach-enchiladas/</item>
+        <item name="food_photo_id">spinach_enchiladas</item>
     </string-array>
     <string-array name="food4">
-        <item name="food_id">3</item>
-        <item name="food_name">Big Mac</item>
-        <item name="food_category">American</item>
+        <item name="food_id">4</item>
+        <item name="food_name">Pico de Gallo, Quesadillas</item>
+        <item name="food_category">Latin</item>
         <item name="food_fav">false</item>
-        <item name="food_link">McDonalds</item>
-        <item name="food_photo_id">3</item>
+        <item name="food_link">http://allrecipes.com/recipe/8818/pico-de-gallo-chicken-quesadillas/</item>
+        <item name="food_photo_id">pico_de_gallo_chicken_quesadillas</item>
     </string-array>
     <string-array name="food5">
-        <item name="food_id">4</item>
-        <item name="food_name">Apple Pie</item>
-        <item name="food_category">American</item>
+        <item name="food_id">5</item>
+        <item name="food_name">Salmon Sushi Rolls</item>
+        <item name="food_category">Japanese</item>
         <item name="food_fav">false</item>
-        <item name="food_link">Dessert</item>
-        <item name="food_photo_id">4</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/sushi-rolls-recipe-2040225</item>
+        <item name="food_photo_id">salmon_suchi_rolls</item>
     </string-array>
     <string-array name="food6">
-        <item name="food_id">5</item>
-        <item name="food_name">Taco</item>
-        <item name="food_category">Latin</item>
+        <item name="food_id">6</item>
+        <item name="food_name">Ramen Noodle Soup</item>
+        <item name="food_category">Japanese</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">5</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/food-network-kitchen/ramen-noodle-soup-recipe-2268925</item>
+        <item name="food_photo_id">ramen_noodle_soup</item>
     </string-array>
     <string-array name="food7">
-        <item name="food_id">6</item>
-        <item name="food_name">Burrito</item>
-        <item name="food_category">Latin</item>
+        <item name="food_id">7</item>
+        <item name="food_name">Tonkatsu</item>
+        <item name="food_category">Japanese</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">6</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/pork-tonkatsu-recipe-2117688</item>
+        <item name="food_photo_id">tonkatsu</item>
     </string-array>
     <string-array name="food8">
-        <item name="food_id">7</item>
-        <item name="food_name">Chimichonga</item>
-        <item name="food_category">Latin</item>
+        <item name="food_id">8</item>
+        <item name="food_name">Chicken Tikka Masala</item>
+        <item name="food_category">Indian</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">7</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/bobby-flay/chicken-tikka-masala-recipe-1952773</item>
+        <item name="food_photo_id">chicken_tikka_masala</item>
     </string-array>
     <string-array name="food9">
-        <item name="food_id">8</item>
-        <item name="food_name">Juevos Rancheros</item>
-        <item name="food_category">Latin</item>
+        <item name="food_id">9</item>
+        <item name="food_name">Butter Chicken</item>
+        <item name="food_category">Indian</item>
         <item name="food_fav">false</item>
-        <item name="food_link">Breakfast Food</item>
-        <item name="food_photo_id">8</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/butter-chickenindian-chicken-in-tomato-cream-sauce-recipe-1942704</item>
+        <item name="food_photo_id">butter_chicken</item>
     </string-array>
     <string-array name="food10">
-        <item name="food_id">9</item>
-        <item name="food_name">Churro</item>
-        <item name="food_category">Latin</item>
+        <item name="food_id">10</item>
+        <item name="food_name">Vegetable Biryani</item>
+        <item name="food_category">Indian</item>
         <item name="food_fav">false</item>
-        <item name="food_link">Dessert</item>
-        <item name="food_photo_id">9</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/food-network-kitchen/vegetable-biryani-recipe-2011470</item>
+        <item name="food_photo_id">vegetable_biryani</item>
     </string-array>
     <string-array name="food11">
-        <item name="food_id">10</item>
-        <item name="food_name"></item>
-        <item name="food_category">Japanese</item>
+        <item name="food_id">11</item>
+        <item name="food_name">Coquilles Saint-Jacques</item>
+        <item name="food_category">French</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">10</item>
+        <item name="food_link">http://www.saveur.com/article/Recipes/Classic-Gratineed-Scallops</item>
+        <item name="food_photo_id">coquilles_saint_jacques</item>
     </string-array>
     <string-array name="food12">
-        <item name="food_id">11</item>
-        <item name="food_name"></item>
-        <item name="food_category">Japanese</item>
+        <item name="food_id">12</item>
+        <item name="food_name">Blanquette de Veau</item>
+        <item name="food_category">French</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">11</item>
+        <item name="food_link">http://lostpastremembered.blogspot.com/2013/01/paris-20s-and-sauces-series-voluptuous.html</item>
+        <item name="food_photo_id">blanquette_de_veau</item>
     </string-array>
     <string-array name="food13">
-        <item name="food_id">12</item>
-        <item name="food_name"></item>
-        <item name="food_category">Japanese</item>
+        <item name="food_id">13</item>
+        <item name="food_name">Steak Tartare</item>
+        <item name="food_category">French</item>
         <item name="food_fav">false</item>
-        <item name="food_link">Breakfast Food</item>
-        <item name="food_photo_id">12</item>
+        <item name="food_link">https://www.chowhound.com/recipes/classic-steak-tartare-10983</item>
+        <item name="food_photo_id">steak_tartare</item>
     </string-array>
     <string-array name="food14">
-        <item name="food_id">13</item>
-        <item name="food_name"></item>
-        <item name="food_category">Japanese</item>
+        <item name="food_id">14</item>
+        <item name="food_name">Neapolitan pizza</item>
+        <item name="food_category">Italian</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">13</item>
+        <item name="food_link">http://www.epicurious.com/recipes/food/views/neapolitan-style-pizza-pizza-alla-napoletana-51111000</item>
+        <item name="food_photo_id">neapolitan_pizza</item>
     </string-array>
     <string-array name="food15">
-        <item name="food_id">14</item>
-        <item name="food_name"></item>
-        <item name="food_category">Japanese</item>
+        <item name="food_id">15</item>
+        <item name="food_name">Italian Wedding Soup</item>
+        <item name="food_category">Italian</item>
         <item name="food_fav">false</item>
-        <item name="food_link">Dessert</item>
-        <item name="food_photo_id">14</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/giada-de-laurentiis/italian-wedding-soup-recipe-1915916</item>
+        <item name="food_photo_id">italian_wedding_soup</item>
     </string-array>
     <string-array name="food16">
-        <item name="food_id">15</item>
-        <item name="food_name"></item>
-        <item name="food_category">French</item>
+        <item name="food_id">16</item>
+        <item name="food_name">Pasta Primavera</item>
+        <item name="food_category">Italian</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">15</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/ree-drummond/pasta-primavera-recipe-2120501</item>
+        <item name="food_photo_id">pasta_primavera</item>
     </string-array>
     <string-array name="food17">
-        <item name="food_id">16</item>
-        <item name="food_name"></item>
-        <item name="food_category">French</item>
+        <item name="food_id">17</item>
+        <item name="food_name">Kung Pao Chicken</item>
+        <item name="food_category">Chinese</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">16</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/ree-drummond/kung-pao-chicken-3691491</item>
+        <item name="food_photo_id">kung_pao_chicken</item>
     </string-array>
     <string-array name="food18">
-        <item name="food_id">17</item>
-        <item name="food_name"></item>
-        <item name="food_category">French</item>
+        <item name="food_id">18</item>
+        <item name="food_name">Fried Rice</item>
+        <item name="food_category">Chinese</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">17</item>
+        <item name="food_link">http://www.foodnetwork.com/recipes/food-network-kitchen/fried-rice-recipe2-1941813</item>
+        <item name="food_photo_id">fried_rice</item>
     </string-array>
     <string-array name="food19">
-        <item name="food_id">18</item>
-        <item name="food_name"></item>
-        <item name="food_category">French</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">18</item>
-    </string-array>
-    <string-array name="food20">
         <item name="food_id">19</item>
-        <item name="food_name"></item>
-        <item name="food_category">French</item>
-        <item name="food_fav">false</item>
-        <item name="food_link">Dessert</item>
-        <item name="food_photo_id">19</item>
-    </string-array>
-    <string-array name="food21">
-        <item name="food_id">20</item>
-        <item name="food_name"></item>
-        <item name="food_category">Indian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">20</item>
-    </string-array>
-    <string-array name="food22">
-        <item name="food_id">21</item>
-        <item name="food_name"></item>
-        <item name="food_category">Indian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">21</item>
-    </string-array>
-    <string-array name="food23">
-        <item name="food_id">22</item>
-        <item name="food_name"></item>
-        <item name="food_category">Indian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link">Breakfast Food</item>
-        <item name="food_photo_id">22</item>
-    </string-array>
-    <string-array name="food24">
-        <item name="food_id">23</item>
-        <item name="food_name"></item>
-        <item name="food_category">Indian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">23</item>
-    </string-array>
-    <string-array name="food25">
-        <item name="food_id">24</item>
-        <item name="food_name"></item>
-        <item name="food_category">Indian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link">Dessert</item>
-        <item name="food_photo_id">24</item>
-    </string-array>
-    <string-array name="food26">
-        <item name="food_id">25</item>
-        <item name="food_name"></item>
-        <item name="food_category">Italian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">25</item>
-    </string-array>
-    <string-array name="food27">
-        <item name="food_id">26</item>
-        <item name="food_name"></item>
-        <item name="food_category">Italian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">26</item>
-    </string-array>
-    <string-array name="food28">
-        <item name="food_id">27</item>
-        <item name="food_name"></item>
-        <item name="food_category">Italian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">27</item>
-    </string-array>
-    <string-array name="food29">
-        <item name="food_id">28</item>
-        <item name="food_name"></item>
-        <item name="food_category">Italian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">28</item>
-    </string-array>
-    <string-array name="food30">
-        <item name="food_id">29</item>
-        <item name="food_name"></item>
-        <item name="food_category">Italian</item>
-        <item name="food_fav">false</item>
-        <item name="food_link">Dessert</item>
-        <item name="food_photo_id">29</item>
-    </string-array>
-    <string-array name="food31">
-        <item name="food_id">30</item>
-        <item name="food_name"></item>
+        <item name="food_name">Mapo Tofu</item>
         <item name="food_category">Chinese</item>
         <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">30</item>
-    </string-array>
-    <string-array name="food32">
-        <item name="food_id">31</item>
-        <item name="food_name"></item>
-        <item name="food_category">Chinese</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">31</item>
-    </string-array>
-    <string-array name="food33">
-        <item name="food_id">32</item>
-        <item name="food_name"></item>
-        <item name="food_category">Chinese</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">32</item>
-    </string-array>
-    <string-array name="food34">
-        <item name="food_id">33</item>
-        <item name="food_name"></item>
-        <item name="food_category">Chinese</item>
-        <item name="food_fav">false</item>
-        <item name="food_link"></item>
-        <item name="food_photo_id">33</item>
-    </string-array>
-    <string-array name="food35">
-        <item name="food_id">34</item>
-        <item name="food_name"></item>
-        <item name="food_category">Chinese</item>
-        <item name="food_fav">false</item>
-        <item name="food_link">Dessert</item>
-        <item name="food_photo_id">34</item>
+        <item name="food_link">http://www.pbs.org/food/recipes/mapo-tofu/</item>
+        <item name="food_photo_id">mapo_tofu</item>
     </string-array>
 </resources>

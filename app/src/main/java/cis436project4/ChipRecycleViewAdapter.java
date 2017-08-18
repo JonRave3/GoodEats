@@ -57,6 +57,13 @@ public class ChipRecycleViewAdapter extends RecyclerView.Adapter {
         return this.chipList.size();
     }
 
+    public void resetChipList(){
+        this.chipList.clear();
+        for(String s : Chip.category){
+            chipList.add(s);
+        }
+        this.notifyDataSetChanged();
+    }
     public ArrayList<String> getChipList(){
         return this.chipList;
     }
@@ -79,6 +86,7 @@ public class ChipRecycleViewAdapter extends RecyclerView.Adapter {
             chipName = (TextView) itemView.findViewById(R.id.chip_name);
             deleteIcon = (ImageView) itemView.findViewById(R.id.chip_delete);
             container = (RelativeLayout) itemView.findViewById(R.id.chip_container);
+
         }
     }
 }

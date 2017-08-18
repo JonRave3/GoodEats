@@ -10,9 +10,10 @@ import java.util.Collections;
  */
 
 public class FoodList extends ArrayList<Food> {
-    Type food = Food.class;
-    private static final int MAX_SIZE = 35;
+
+    public static final int MAX_SIZE = 20;
     private static FoodList foodList = new FoodList();
+
     public FoodList(){
         super(MAX_SIZE);
     }

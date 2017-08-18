@@ -1,5 +1,6 @@
 package cis436project4;
 
+import android.app.FragmentTransaction;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -10,32 +11,30 @@ import android.os.Bundle;
 
 import goodeats.cis436project4.R;
 
-public class MainActivity extends AppCompatActivity implements SearchFragment.OnSearchFragmentInteractionListener, SearchResultsFragment.OnSearchParamsChangedListener{
+public class MainActivity extends AppCompatActivity implements MainFragment.OnRandButtonPressed{
 
-    private static SQLiteDatabase sqLiteDatabase;
+    protected static SQLiteDatabase sqLiteDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //SharedPrefs.init(this);
-        //SharedPreferences.Editor spe = SharedPrefs.getPrefs().edit();
+        //setup the database
         SQLSingleton.init(this, new DBConnection(this));
         SQLSingleton.getAllRecords();
-        //setup the database
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
     }//end of onCreate()
 
     @Override
-    public void onSearchParamsChange() {
-
-    }
-
-    @Override
-    public void onSearchFragmentInteraction() {
-        SearchResultsFragment searchResultsFragment = (SearchResultsFragment) getFragmentManager().findFragmentById(R.id.search_fragment);
-        if(searchResultsFragment != null){
-            searchResultsFragment.refreshResults(this);
+    public void updateFoodCardMain(Food record) {
+        FoodCardFragment fcf = (FoodCardFragment) this.getSupportFragmentManager().findFragmentById(R.id.food_card_layout_main);
+        if(fcf == null){
+            fcf = FoodCardFragment.newInstance(record);
+            android.support.v4.app.FragmentTransaction fm = getSupportFragmentManager().beginTransaction();
+            fm.replace(R.id.food_card_layout_main, fcf).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+        }
+        else {
+            fcf.updateView(record);
         }
     }
 }
